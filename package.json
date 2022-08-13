@@ -1,0 +1,90 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ytfzf",
+  "title": "ytfzf",
+  "description": "Search YouTube videos via ytfzf CLI tool",
+  "icon": "youtube.png",
+  "author": "ex0cortex",
+  "categories": [
+    "Media"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "Search Videos via ytfzf",
+      "description": "Search YouTube videos via ytfzf",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "view",
+      "type": "dropdown",
+      "title": "View Layout",
+      "required": false,
+      "default": "grid",
+      "data": [
+        {
+          "title": "Grid",
+          "value": "grid"
+        },
+        {
+          "title": "List",
+          "value": "list"
+        }
+      ],
+      "description": "Set the default view"
+    },
+    {
+      "name": "griditemsize",
+      "type": "dropdown",
+      "title": "Grid Item Size",
+      "required": false,
+      "default": "medium",
+      "data": [
+        {
+          "title": "Small",
+          "value": "small"
+        },
+        {
+          "title": "Medium",
+          "value": "medium"
+        },
+        {
+          "title": "Large",
+          "value": "large"
+        }
+      ],
+      "description": "Set the default grid item size"
+    },
+    {
+      "name": "resultCount",
+      "type": "textfield",
+      "title": "Max result count",
+      "required": false,
+      "default": "15",
+      "description": "Set max result count"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.38.3",
+    "@raycast/utils": "^1.1.0",
+    "execa": "^6.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
